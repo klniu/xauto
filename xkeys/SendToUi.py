@@ -10,15 +10,9 @@ Since 2011-11-23
 """
 import os
 import datetime
-import sys
-import ClipboardUtil
+from xkeys import ClipboardUtil, Common
 import time
-import KeyboardUtil
-import Message
-from ClipboardUtil import pasteFromClipboardXsel, copyToClipboardXclip
-from Tkinter import Tk
-import tkSimpleDialog
-import Common
+from xkeys.ClipboardUtil import pasteFromClipboardXsel, copyToClipboardXclip
 
 if __name__ == "__main__":
         import sys, PythonCall
@@ -74,38 +68,7 @@ def beforeSetClipboard():
 def afterSetClipboard(storedClipboard):
     copyToClipboardXclip(storedClipboard)
 
-def hi():
-    KeyboardUtil.setDefaultLanguage()
-    storedClipboard = beforeSetClipboard()
-    sendText("Hi ,")
-    sendKey("Return Return Return Return")
-    sendText("Regards,")
-    sendKey("Return")
-    sendText(Common.NAME)
-    sendKey("Up Up Up Up Up End Left")
-    afterSetClipboard(storedClipboard)
-
-def newTask():
-    """
-    Sends a task template
-    """
-    KeyboardUtil.setDefaultLanguage()
-    output = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-
-    Tk().withdraw()
-    text = tkSimpleDialog.askstring('Task category', 'Category::')
-
-    if text is None or text == "": sys.exit()
-
-    #works as well
-    #time.sleep(0.24)
-    #output = system.exec_command("date +%Y%m%d%H%M%S")
-    #time = output.stdout.readline()
-    storedClipboard = ClipboardUtil.pasteFromClipboardXsel()
-    sendText("task " + text + "\n" + "    " + output + " " +  "\n\n" + "solution" + "\n\n" + "info" + "\n\n" + "keywords")
-    sendKey("Home Up Up Up Up Up Up End")
-    ClipboardUtil.copyToClipboardXclip(storedClipboard)
-
-#todo place a correct call to xbindkeys config
+#ction ReformatCode
+# todo place a correct call to xbindkeys config
 def sendKeyAltSpace():
     sendKey("alt+space")

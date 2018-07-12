@@ -1,9 +1,9 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='xauto',
     version='0.1',
-    packages=['xkeys', 'helpers'],
+    packages=find_packages(),
     url='https://github.com/klniu/xauto',
     license='MIT',
     author='klniu',
