@@ -10,7 +10,7 @@ Since 2011-11-23
 import os
 import subprocess
 import string
-from xkeys import ClipboardUtil, Common, SendToUi
+from xauto.xkeys import ClipboardUtil, Common, SendToUi
 
 """
 Gets window name by process id

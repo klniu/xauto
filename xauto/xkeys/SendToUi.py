@@ -10,9 +10,9 @@ Since 2011-11-23
 """
 import os
 import datetime
-from xkeys import ClipboardUtil, Common
+from xauto.xkeys import ClipboardUtil, Common
 import time
-from xkeys.ClipboardUtil import pasteFromClipboardXsel, copyToClipboardXclip
+from xauto.xkeys.ClipboardUtil import pasteFromClipboardXsel, copyToClipboardXclip
 
 if __name__ == "__main__":
         import sys, PythonCall

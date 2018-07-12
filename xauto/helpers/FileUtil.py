@@ -13,7 +13,7 @@ def readLines(filename: str, start: int = 0, skip: int = 0) -> list:
     with open(filename, 'rt') as f:
         lines = f.readlines()[start:]
         for i, line in enumerate(lines):
-            no = i + 1 - start
+            no = i
             if no % (skip + 1) == 0:
                 result.append(str.strip(line))
     return result

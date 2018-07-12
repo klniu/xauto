@@ -8,5 +8,5 @@ setup(
     license='MIT',
     author='klniu',
     author_email='',
-    description='a collection to automate x window'
+    description='a collection to automate x window', install_requires=['selenium']
 )

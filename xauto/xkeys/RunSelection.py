@@ -8,7 +8,7 @@ Author Andrew Terekhine
 Since 2011-11-25
 """
 
-from xkeys import SystemUtil
+from xauto.xkeys import SystemUtil
 
 if __name__ == "__main__":
         import sys, PythonCall

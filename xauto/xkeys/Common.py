@@ -2,7 +2,7 @@ import os
 import subprocess
 import string
 
-from xkeys import Message
+from xauto.xkeys import Message
 
 
 def getPid(processName):
