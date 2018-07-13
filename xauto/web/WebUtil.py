@@ -55,6 +55,9 @@ class WebUtil:
     def back(self):
         self.browser.back()
 
+    def text(self, xpath: str):
+        return self._find_element(xpath).text
+
     def close_title(self, title):
         handles = self.browser.window_handles
         for handle in handles:
