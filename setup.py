@@ -9,5 +9,5 @@ setup(
     author='klniu',
     author_email='',
     description='a collection to automate x window',
-    install_requires=['selenium', 'stem']
+    install_requires=['selenium', 'stem', 'pycryptodome']
 )
